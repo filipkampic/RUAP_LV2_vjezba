@@ -1,0 +1,6 @@
+@RUAP_LV2_API_HostAddress = http://localhost:5032
+
+GET {{RUAP_LV2_API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
