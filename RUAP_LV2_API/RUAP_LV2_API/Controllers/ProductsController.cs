@@ -42,5 +42,19 @@ namespace RUAP_LV2_API.Controllers
                 new { id = product.Id },
                 product);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, Product updatedProduct)
+        {
+            var product = products.FirstOrDefault(p => p.Id == id);
+            if (product == null)
+                return NotFound();
+
+            product.Name = updatedProduct.Name;
+            product.Category = updatedProduct.Category;
+            product.Price = updatedProduct.Price;
+
+            return NoContent();
+        }
     }
 }
