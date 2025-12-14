@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RUAP_LV2_API\RUAP_LV2_API.csproj" />
+  </ItemGroup>
+
 </Project>
