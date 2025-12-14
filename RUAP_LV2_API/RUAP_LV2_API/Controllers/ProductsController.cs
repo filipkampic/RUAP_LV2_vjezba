@@ -56,5 +56,16 @@ namespace RUAP_LV2_API.Controllers
 
             return NoContent();
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var product = products.FirstOrDefault(p => p.Id == id);
+            if (product == null)
+                return NotFound();
+
+            products.Remove(product);
+            return NoContent();
+        }
     }
 }
